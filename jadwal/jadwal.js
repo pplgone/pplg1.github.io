@@ -2,7 +2,6 @@ const date = new Date();
 const date2 = new Date(date.getTime() + 7 * 60 * 60 * 1000);
 const today = date.getDay();
 const week = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-const mapel = ["B. Indonesia", "Matematika", "Sejarah", "PKK", "Mikrotik", "Basis Data", "PBO", "PABP", "B. Inggris", "Jepang", "WEB", "PKN", "PJOK"]
 
 const siswa = [
     "Abdul Hadi", "Aditya Alfitodinova", "Akmal Sopandi", "Aldri Septi", "Anggira Alfadilah", "Arifa Setiawati",
@@ -31,40 +30,57 @@ piket = {
     })(),
     2: (() => {
         let info = '';
-        for (let i = 6; i < 11; i++) {
+        for (let i = 6; i < 12; i++) {
             info = info + `<p>${siswa[i]}</p>`;
         }
         return info;
     })(),
     3: (() => {
         let info = '';
-        for (let i = 11; i < 17; i++) {
+        for (let i = 12; i < 18; i++) {
             info = info + `<p>${siswa[i]}</p>`;
         }
         return info;
     })(),
     4: (() => {
         let info = '';
-        for (let i = 17; i < 23; i++) {
+        for (let i = 18; i < 24; i++) {
             info = info + `<p>${siswa[i]}</p>`;
         }
         return info;
     })(),
     5: (() => {
         let info = '';
-        for (let i = 23; i < 29; i++) {
+        for (let i = 24; i < 30; i++) {
             info = info + `<p>${siswa[i]}</p>`;
         }
         return info;
     })(),
     6: (() => {
         let info = '';
-        for (let i = 29; i < 35; i++) {
+        for (let i = 30; i < 36; i++) {
             info = info + `<p>${siswa[i]}</p>`;
         }
         return info;
     })(),
 }
+
+const mapel = {
+    0: "B. Indonesia", 
+    1: "Matematika", 
+    2: "Sejarah", 
+    3: "PKK", 
+    4: "Mikrotik", 
+    5: "Basis Data", 
+    6: "PBO", 
+    7: "PABP", 
+    8: "B. Inggris", 
+    9: "Jepang", 
+    10: "WEB", 
+    11: "PKN", 
+    12: "PJOK"
+}
+
 
 pelajaran = {
     0: `<h2>PIKET</h2>
@@ -76,43 +92,66 @@ pelajaran = {
     <P>Libur</P>
     `,
     1: `<h2>PELAJARAN</h2>
+    <P>${mapel[1]}</P>
     <P>${mapel[3]}</P>
     <P>${mapel[0]}</P>
-    <P>${mapel[7]}</P>
-    <P>${mapel[6]}</P>
+    <P>${mapel[12]}</P>
     `,
     2: `<h2>PELAJARAN</h2>
+    <P>${mapel[6]}</P>
+    <P>${mapel[8]}</P>
     <P>${mapel[7]}</P>
     <P>${mapel[0]}</P>
     <P>${mapel[1]}</P>
-    <P>${mapel[3]}</P>
-    <P>${mapel[11]}</P>
-    <P>${mapel[10]}</P>
     `,
     3: `<h2>PELAJARAN</h2>
-    <P>${mapel[6]}</P>
-    <P>${mapel[4]}</P>
     <P>${mapel[3]}</P>
-    <P>${mapel[1]}</P>
+    <P>${mapel[12]}</P>
+    <P>${mapel[7]}</P>
+    <P>${mapel[10]}</P>
     `,
     4: `<h2>PELAJARAN</h2>
     <P>${mapel[6]}</P>
+    <P>${mapel[10]}</P>
+    <P>${mapel[9]}</P>
     <P>${mapel[4]}</P>
-    <P>${mapel[5]}</P>
-    <P>${mapel[5]}</P>
     `,
     5: `<h2>PELAJARAN</h2>
-    <P>${mapel[10]}</P>
-    <P>${mapel[12]}</P>
-    <P>${mapel[8]}</P>
+    <P>${mapel[3]}</P>
+    <P>${mapel[4]}</P>
+    <P>${mapel[5]}</P>
     `,
     6: `<h2>PELAJARAN</h2>
-    <P>${mapel[9]}</P>
     <P>${mapel[2]}</P>
-    <P>${mapel[10]}</P>
     <P>${mapel[8]}</P>
+    <P>${mapel[10]}</P>
     `
 }
+
+function hariIni(){
+    const senin = document.getElementById('senin')
+    const selasa = document.getElementById('selasa')
+    const rabu = document.getElementById('rabu')
+    const kamis = document.getElementById('kamis')
+    const jumat = document.getElementById('jumat')
+    const sabtu = document.getElementById('sabtu')
+
+    if(today == 1){
+        senin.innerHTML = "HARI INI"
+    }else if(today == 2){
+        selasa.innerHTML = "HARI INI"
+    }else if(today == 3){
+        rabu.innerHTML = "HARI INI"
+    }else if(today == 4){
+        kamis.innerHTML = "HARI INI"
+    }else if(today == 5){
+        jumat.innerHTML = "HARI INI"
+    }else if(today == 6){
+        sabtu.innerHTML = "HARI INI"
+    }
+}
+
+hariIni()
 
 function dataPiket() {
     if (today == 0) {
@@ -219,4 +258,3 @@ function update() {
     pelajaran.innerHTML = dataPelajaran()
 }
 update()
-setInterval(update, 10000)
