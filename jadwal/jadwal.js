@@ -95,7 +95,7 @@ pelajaran = {
     <P>${mapel[1]}</P>
     <P>${mapel[3]}</P>
     <P>${mapel[0]}</P>
-    <P>${mapel[12]}</P>
+    <P>${mapel[11]}</P>
     `,
     2: `<h2>PELAJARAN</h2>
     <P>${mapel[6]}</P>
