@@ -248,7 +248,7 @@ body{
 /* START ALBUM */
 
 .carousel{
-	margin-top: -30vw;
+	margin-top: -85vw;
 }
 
 .carousel .carousel-item{
@@ -351,8 +351,8 @@ body{
  }
 
  .kartu-kontak p{
-	font-size: 10px;
-	margin-top: -10px;
+	font-size: 20px;
+	margin-top: 20px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
  }
@@ -363,13 +363,19 @@ body{
 
  .kartu-kontak h2{
 	margin-top: 10px;
+	font-weight: bold;
 	letter-spacing: 5px;
 	font-family: 'Vazirmatn', sans-serif;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
  }
 
  .kartu-kontak h3{
-	margin-top: 30px;
+	margin-top: 60px;
+	font-weight: bolder;
 	font-family: 'Vazirmatn', sans-serif;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
  }
 
 
@@ -410,6 +416,7 @@ body{
 }
 
 .kartu-jadwal p{
+	margin-top: 40px;
 	font-size: 30px;
 	color: white;
 	-webkit-text-stroke-width: 1px;
